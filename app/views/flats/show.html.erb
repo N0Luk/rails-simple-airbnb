@@ -1,0 +1,13 @@
+<h1><%= @flat.name %></h1>
+
+<div class="row">
+  <div class="col-md-6">
+    <img src="<%= @flat.image_url %>" alt="Flat Image" class="img-fluid mb-3">
+    <p><strong>Address:</strong> <%= @flat.address %></p>
+    <p><strong>Number of guests:</strong> <%= @flat.number_of_guests %></p>
+    <p><strong>Price per night:</strong> <%= @flat.price_per_night %> €</p>
+    <p><strong>Description:</strong> <%= @flat.description %></p>
+  </div>
+</div>
+
+<%= link_to "Back to Flats", flats_path, class: "btn btn-secondary" %>

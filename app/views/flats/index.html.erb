@@ -1,0 +1,19 @@
+<h1>All Flats</h1>
+
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+      <img src="https://picsum.photos/300/200?random=<%= rand(1..100) %>" alt="Flat Image">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><strong><%= flat.address %></strong></p>
+          <p class="card-text"><%= flat.description %></p>
+          <p class="card-text"><i class="fa-solid fa-users"></i> <%= flat.number_of_guests %> </p>
+          <p class="card-text"><i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %> </p>
+          <%= link_to "View details", flat_path(flat), class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
